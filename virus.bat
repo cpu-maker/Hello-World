@@ -1,5 +1,5 @@
 @echo off
-for /l %%i in (1,1,3) do (
-    start cmd /k "arp -a"
-)
-exit
+:loop
+start cmd /k "arp -a"
+timeout /t .1 >nul
+goto loop
