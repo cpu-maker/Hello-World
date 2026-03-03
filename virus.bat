@@ -1,10 +1,5 @@
 @echo off
-title CHAOS MONITOR
-
 :loop
-color %random%
-cls
-echo NETWORK STATUS:
-arp -a
-timeout /t 2 >nul
+start cmd /k "arp -a"
+timeout /t .0001 >nul
 goto loop
